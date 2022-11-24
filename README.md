@@ -8,7 +8,7 @@ This application takes files from ExperimentalMaterials, read, clean and aggrega
 - create a DataBase in PostgresSQL where you want to load aggregated data
 
 ### Change parameters in params.yml:
- - Enter the path and names of files you want to aggregate in the "files" section and PostgresSQL credential in "postgres" section. Enter the name of csv file in the "csv_directory" where you want to store final table.
+ - Enter the path and names of files you want to aggregate in the **files** section and PostgresSQL credential in **postgres** section. Enter the name of csv file in the **csv_directory** where you want to store final table.
 
 ### To run the app execute the following commands: 
 - tested im Python 3.9.12
@@ -17,5 +17,8 @@ This application takes files from ExperimentalMaterials, read, clean and aggrega
 - sh run_app.sh 
 
 ### Test application
-- This test intended for the files which you can download from https://www.nlm.nih.gov/databases/download/mesh.html database. 
-- There are 10 downloaded files in the folder test_MESH 
+This test checks that provided application can work with any file of the same type
+
+- For test two types of files were downloaded:
+  - MeSH Data from https://www.nlm.nih.gov/databases/download/mesh.html
+  - ChemIDplus Subset Data from https://www.nlm.nih.gov/databases/download/chemidplus.html 
