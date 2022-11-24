@@ -1,25 +1,38 @@
 # Data collection from diverse data sources
+<img width="901" alt="Screen Shot 2022-11-24 at 8 56 49 AM" src="https://user-images.githubusercontent.com/72933965/203840255-6757ddb7-1a64-4c61-a6ff-d21865b55466.png">
 
-<img width="691" alt="Screen Shot 2022-11-23 at 11 36 10 PM" src="https://user-images.githubusercontent.com/72933965/203702572-f848ae0c-c6a0-4e8b-a151-eee7afb63c98.png">
+### Description
+This application combines data from four diverse sources, and when aggregatted by CAS Numbers, generates a single, analytical dataset and loads it to:
+- a table in PostgresSQL database 
+- .csv file 
+to make all the data available to the end user. 
 
-This application takes files from ExperimentalMaterials folder: *chemid.xml, MeSHSupplemental.xml, List_of_Classifications.xls, chemname.zip* - 
-read, clean and aggregate them. In the final table collected all chemicals with unique CAS Numbers from each data source. 
+The following files should be provided and uploaded to ExperimentalMaterials folder as inputs:
+-	chemid.xml
+-	MeSHSupplemental.xml
+-	List_of_Classifications.xls
+-	chemname.zip.
 
-### Before run this app you should:
-- create a DataBase in PostgresSQL where you want to load aggregated data
+### Before running the application:
+Make sure there is a database available in PostgresSQL as the target location for the data. User can choose the table to be created automatically at a runtime (see params.yml)
 
-### Change parameters in params.yml:
- - Enter the path and names of files you want to aggregate in the **files** section and PostgresSQL credential in **postgres** section. Enter the name of csv file ,where you want to store final table in the **csv_directory**.
+### User parameters in params.yml:
+Under **files** section, enter the path and names of input files to be combined. **postgres** section lets the user provide PostgresSQL credentials as well as table name. Finally, the name and location of output csv file can be specified in **csv_directory** section. **test** section applies to run the application in test mode (see below).
 
-### To run the app execute the following commands: 
-- tested im Python 3.9.12
-- pip install -r requirements.txt
-- set up app parameters in params.yaml
-- sh run_app.sh 
+### To run the application execute the following command:
+- **python main.py**
 
-### Test application
-This test checks that provided application can work with any file of the same type
+### Test mode
+A total of two static files have been prepared to run the application in a test mode: 
+- List_of_Classifications.xls,
+-	chemname.zip. 
+both located in blabla folder. 
 
-- For test two types of files were downloaded:
-  - MeSH Data from https://www.nlm.nih.gov/databases/download/mesh.html
-  - ChemIDplus Subset Data from https://www.nlm.nih.gov/databases/download/chemidplus.html 
+These files may be replaced by different versions with modified data as long as the overall structure and format remains the same. The other two files can be substituted with any of files available on the following sources:
+- MeSH Data from https://www.nlm.nih.gov/databases/download/mesh.html
+- ChemIDplus Subset Data from https://www.nlm.nih.gov/databases/download/chemidplus.html
+
+### To run test:
+-	Set parameters under *test* section in params.yml
+-	execute the following commands:
+-	**python test.py**
