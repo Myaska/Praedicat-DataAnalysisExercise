@@ -1,6 +1,6 @@
 # Data collection from diverse data sources
 
-<img width="700" alt="Screen Shot 2022-11-23 at 11 34 15 PM" src="https://user-images.githubusercontent.com/72933965/203702297-ddf0c96a-1f0f-48d8-86c3-6b7f0e8bda52.png">
+<img width="691" alt="Screen Shot 2022-11-23 at 11 36 10 PM" src="https://user-images.githubusercontent.com/72933965/203702572-f848ae0c-c6a0-4e8b-a151-eee7afb63c98.png">
 
 This application takes files from ExperimentalMaterials folder: *chemid.xml, MeSHSupplemental.xml, List_of_Classifications.xls, chemname.zip* - 
 read, clean and aggregate them. In the final table collected all chemicals with unique CAS Numbers from each data source. 
