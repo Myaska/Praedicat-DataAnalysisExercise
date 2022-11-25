@@ -33,6 +33,7 @@ These files may be replaced by different versions with modified data as long as 
 - ChemIDplus Subset Data from https://www.nlm.nih.gov/databases/download/chemidplus.html
 
 ### To run test:
+- Unzip the test.zip folder
 -	Set parameters under **test** section in params.yml
 -	execute the following commands:
 -	*python test.py*
