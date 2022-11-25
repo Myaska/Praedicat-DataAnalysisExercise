@@ -1,0 +1,24 @@
+files: 
+  path : ExerciseMaterials/
+  mesh_file : MeSHSupplemental.xml
+  chemid_file : chemid.xml
+  excel_file : List_of_Classifications.xls
+  ppis_file : PPIS/chemname.zip
+
+csv_directory:
+  save_to : UnitedChemicals.csv
+
+postgres:
+  dbname : UnitedChemicals
+  postgres_table_name : united_data
+  user : user
+  password : password #for the simplicity the credentials in the file 
+
+test:
+  path_test_mesh : test/MeSH/
+  path_test_chemid : test/ChemIDPlus/
+  mesh_file : fredesc2011.xml 
+  chemid_file : chemid.xml
+
+   
+ 
