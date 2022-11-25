@@ -4,7 +4,7 @@
 ### Description
 This application combines data from four diverse sources, and when aggregatted by CAS Numbers, generates a single, analytical dataset and loads it to:
 - a table in PostgresSQL database 
-- .csv file 
+- UnitedChemicals.csv file 
 to make all the data available to the end user. 
 
 The following files should be provided and uploaded to ExperimentalMaterials folder as inputs:
